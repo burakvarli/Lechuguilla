@@ -9,7 +9,7 @@
         <div class="filmler">
 
             <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/interstellar.png" alt="Interstellar" class="poster">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/interstellar.png" alt="Interstellar" class="poster">
                 <div class="kategoriler">
                     <span class="kategori bilim-kurgu"><a href="#">Bilim Kurgu</a></span>
                     <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
@@ -21,7 +21,7 @@
             </article>
 
             <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/benjamin.png" alt="Interstellar" class="poster">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/benjamin.png" alt="Interstellar" class="poster">
                 <div class="kategoriler">
                     <span class="kategori dram"><a href="#">Dram</a></span>
                 </div>
@@ -32,7 +32,7 @@
             </article>
 
             <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/sh.png" alt="Interstellar" class="poster">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/sh.png" alt="Interstellar" class="poster">
                 <div class="kategoriler">
                     <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
                 </div>
@@ -43,7 +43,7 @@
             </article>
 
             <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/inception.png" alt="Interstellar" class="poster">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/inception.png" alt="Interstellar" class="poster">
                 <div class="kategoriler">
                     <span class="kategori bilim-kurgu"><a href="#">Bilim Kurgu</a></span>
                 </div>
@@ -54,7 +54,7 @@
             </article>
 
             <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/law.png" alt="Interstellar" class="poster">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/law.png" alt="Interstellar" class="poster">
                 <div class="kategoriler">
                     <span class="kategori"><a href="#">Korku</a></span>
                 </div>
@@ -65,7 +65,7 @@
             </article>
 
             <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/sh2.png" alt="Interstellar" class="poster">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/sh2.png" alt="Interstellar" class="poster">
                 <div class="kategoriler">
                     <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
                 </div>
@@ -76,7 +76,7 @@
             </article>
 
             <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/invention.png" alt="Interstellar" class="poster">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/invention.png" alt="Interstellar" class="poster">
                 <div class="kategoriler">
                     <span class="kategori komedi"><a href="#">Komedi</a></span>
                 </div>
@@ -87,7 +87,7 @@
             </article>
 
             <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/fight-club.png" alt="Interstellar" class="poster">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/fight-club.png" alt="Interstellar" class="poster">
                 <div class="kategoriler">
                     <span class="kategori dram"><a href="#">Dram</a></span>
                 </div>
@@ -98,7 +98,7 @@
             </article>
 
             <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gravity.png" alt="Interstellar" class="poster">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/gravity.png" alt="Interstellar" class="poster">
                 <div class="kategoriler">
                     <span class="kategori bilim-kurgu"><a href="#">Bilim Kurgu</a></span>
                 </div>
@@ -109,7 +109,7 @@
             </article>
 
             <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/thor.png" alt="Interstellar" class="poster">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/thor.png" alt="Interstellar" class="poster">
                 <div class="kategoriler">
                     <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
                     <span class="kategori bilim-kurgu"><a href="#">Bilim Kurgu</a></span>
@@ -148,7 +148,7 @@
         <div class="filmler buyuk">
 
             <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/sherlock.png" alt="Interstellar" class="poster">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/sherlock.png" alt="Interstellar" class="poster">
                 <div class="kategoriler">
                     <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
                 </div>
@@ -159,7 +159,7 @@
             </article>
 
             <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/salt.png" alt="Interstellar" class="poster">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/salt.png" alt="Interstellar" class="poster">
                 <div class="kategoriler">
                     <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
                 </div>
@@ -170,7 +170,7 @@
             </article>
 
             <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/entourage.png" alt="Interstellar" class="poster">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/entourage.png" alt="Interstellar" class="poster">
                 <div class="kategoriler">
                     <span class="kategori komedi"><a href="#">Komedi</a></span>
                 </div>
@@ -181,7 +181,7 @@
             </article>
 
             <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/avangers.png" alt="Interstellar" class="poster">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/avangers.png" alt="Interstellar" class="poster">
                 <div class="kategoriler">
                     <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
                 </div>
@@ -192,7 +192,7 @@
             </article>
 
             <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/fury.png" alt="Interstellar" class="poster">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/fury.png" alt="Interstellar" class="poster">
                 <div class="kategoriler">
                     <span class="kategori dram"><a href="#">Dram</a></span>
                 </div>
@@ -203,7 +203,7 @@
             </article>
 
             <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/farm.png" alt="Interstellar" class="poster">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/farm.png" alt="Interstellar" class="poster">
                 <div class="kategoriler">
                     <span class="kategori komedi"><a href="#">Komedi</a></span>
                     <span class="kategori dram"><a href="#">Dram</a></span>
@@ -234,7 +234,7 @@
             <div class="filmler buyuk">
 
                 <article class="film">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/abeautifulmind.png" alt="Interstellar" class="poster">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/abeautifulmind.png" alt="Interstellar" class="poster">
                     <div class="kategoriler">
                         <span class="kategori dram"><a href="#">Dram</a></span>
                     </div>
@@ -245,7 +245,7 @@
                 </article>
 
                 <article class="film">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/pirates.png" alt="Interstellar" class="poster">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/pirates.png" alt="Interstellar" class="poster">
                     <div class="kategoriler">
                         <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
                         <span class="kategori macera"><a href="#">Macera</a></span>
@@ -257,7 +257,7 @@
                 </article>
 
                 <article class="film">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/expendables.png" alt="Interstellar" class="poster">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/expendables.png" alt="Interstellar" class="poster">
                     <div class="kategoriler">
                         <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
                     </div>
@@ -268,7 +268,7 @@
                 </article>
 
                 <article class="film">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/scarn.png" alt="Interstellar" class="poster">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/scarn.png" alt="Interstellar" class="poster">
                     <div class="kategoriler">
                         <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
                     </div>
@@ -290,7 +290,7 @@
             <div class="filmler buyuk">
 
                 <article class="film">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/pirates.png" alt="Interstellar" class="poster">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/pirates.png" alt="Interstellar" class="poster">
                     <div class="kategoriler">
                         <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
                         <span class="kategori macera"><a href="#">Macera</a></span>
@@ -302,7 +302,7 @@
                 </article>
 
                 <article class="film">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/scarn.png" alt="Interstellar" class="poster">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/scarn.png" alt="Interstellar" class="poster">
                     <div class="kategoriler">
                         <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
                     </div>
@@ -313,7 +313,7 @@
                 </article>
 
                 <article class="film">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/hobbit.png" alt="Interstellar" class="poster">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/hobbit.png" alt="Interstellar" class="poster">
                     <div class="kategoriler">
                         <span class="kategori macera"><a href="#">Macera</a></span>
                         <span class="kategori dram"><a href="#">Dram</a></span>
@@ -325,7 +325,7 @@
                 </article>
 
                 <article class="film">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/abeautifulmind.png" alt="Interstellar" class="poster">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/abeautifulmind.png" alt="Interstellar" class="poster">
                     <div class="kategoriler">
                         <span class="kategori dram"><a href="#">Dram</a></span>
                     </div>
@@ -346,7 +346,7 @@
             <div class="filmler buyuk">
 
                  <article class="film">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/abeautifulmind.png" alt="Interstellar" class="poster">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/abeautifulmind.png" alt="Interstellar" class="poster">
                     <div class="kategoriler">
                         <span class="kategori dram"><a href="#">Dram</a></span>
                     </div>
@@ -357,7 +357,7 @@
                 </article>
 
                 <article class="film">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/pirates.png" alt="Interstellar" class="poster">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/pirates.png" alt="Interstellar" class="poster">
                     <div class="kategoriler">
                         <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
                         <span class="kategori macera"><a href="#">Macera</a></span>
@@ -369,7 +369,7 @@
                 </article>
 
                 <article class="film">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/expendables.png" alt="Interstellar" class="poster">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/expendables.png" alt="Interstellar" class="poster">
                     <div class="kategoriler">
                         <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
                     </div>
@@ -380,7 +380,7 @@
                 </article>
 
                 <article class="film">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/scarn.png" alt="Interstellar" class="poster">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/scarn.png" alt="Interstellar" class="poster">
                     <div class="kategoriler">
                         <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
                     </div>
@@ -402,7 +402,7 @@
             <div class="filmler buyuk">
 
                 <article class="film">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/pirates.png" alt="Interstellar" class="poster">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/pirates.png" alt="Interstellar" class="poster">
                     <div class="kategoriler">
                         <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
                         <span class="kategori macera"><a href="#">Macera</a></span>
@@ -414,7 +414,7 @@
                 </article>
 
                 <article class="film">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/scarn.png" alt="Interstellar" class="poster">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/scarn.png" alt="Interstellar" class="poster">
                     <div class="kategoriler">
                         <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
                     </div>
@@ -425,7 +425,7 @@
                 </article>
 
                 <article class="film">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/hobbit.png" alt="Interstellar" class="poster">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/hobbit.png" alt="Interstellar" class="poster">
                     <div class="kategoriler">
                         <span class="kategori macera"><a href="#">Macera</a></span>
                         <span class="kategori dram"><a href="#">Dram</a></span>
@@ -437,7 +437,7 @@
                 </article>
 
                 <article class="film">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/abeautifulmind.png" alt="Interstellar" class="poster">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/abeautifulmind.png" alt="Interstellar" class="poster">
                     <div class="kategoriler">
                         <span class="kategori dram"><a href="#">Dram</a></span>
                     </div>

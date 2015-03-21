@@ -25,7 +25,6 @@
         <p class="bilgi">Lechuguilla Film Teması · <a href="http://burakv.com">Burak Varlı</a> · 2015 </p>
     </footer><!--#alt-->
     
-
-    <script src="<?php echo get_template_directory_uri(); ?>//scripts/main.js"></script>
+    <?php wp_footer(); ?>
 </body>
 </html>
