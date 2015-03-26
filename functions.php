@@ -26,6 +26,14 @@ if(is_admin()) {
 	require get_template_directory().'/inc/admin.php';
 }
 
+//
+add_action('init', function(){
+	
+	remove_post_type_support('post', 'editor');
+	add_post_type_support('post', 'excerpt');
+
+});
+
 //javascript ve css dosyalarını ekle
 add_action('wp_enqueue_scripts', function(){
 	wp_enqueue_style('lechuguilla-font', 'http://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext');
