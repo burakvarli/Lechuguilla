@@ -3,126 +3,34 @@
 
     <section id="yeni-filmler">
         <header>
-            <h2>Yeni Filmler</h2> <span class="tumu"><a href="#">Tümü <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="5px" height="9px" fill="#C6C6C6" viewBox="0 0 5 9" version="1.1"><g stroke="none" stroke-width="1" fill-rule="evenodd" sketch:type="MSPage"><g sketch:type="MSArtboardGroup" transform="translate(-233.000000, -128.000000)"><g sketch:type="MSLayerGroup" transform="translate(28.000000, 116.000000)"><g sketch:type="MSShapeGroup"><g><path d="M205 12.5 L205.5 12 L210 16.5 L205.5 21 L205 20.5 L208.9 16.5 L205 12.5 Z"/></g></g></g></g></g></svg></a></span>
+            <h2>Yeni Filmler</h2> <?php tumune_git('yeni-filmler'); ?>
         </header>
 
         <div class="filmler">
+            
+            <?php
+            $yeni_filmler_query = new WP_Query('posts_per_page=10');
 
-            <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/interstellar.png" alt="Interstellar" class="poster">
-                <div class="kategoriler">
-                    <span class="kategori bilim-kurgu"><a href="#">Bilim Kurgu</a></span>
-                    <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
-                </div>
-                <div class="alt">
-                    <h3><a href="#">Interstellar</a></h3>
-                    <p class="bilgi">2009 · 128dk · 8.7/10</p>
-                </div>
-            </article>
+            if($yeni_filmler_query->have_posts()):
+                while($yeni_filmler_query->have_posts()): $yeni_filmler_query->the_post(); $postmeta = get_post_custom(get_the_ID());?>
 
-            <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/benjamin.png" alt="Interstellar" class="poster">
-                <div class="kategoriler">
-                    <span class="kategori dram"><a href="#">Dram</a></span>
-                </div>
-                <div class="alt">
-                    <h3><a href="#">The Curious Case of Benjamin Button</a></h3>
-                    <p class="bilgi">2009 · 128dk · 8.7/10</p>
-                </div>
-            </article>
+                    <article class="film">
+                        <?php gorsel($postmeta, get_the_ID(), get_the_title(), get_the_permalink()); ?>
+                        <?php kategoriler(get_the_ID()); ?>
+                        <div class="alt">
+                            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <p class="bilgi"><?php bilgi($postmeta); ?></p>
+                        </div>
+                    </article>
 
-            <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/sh.png" alt="Interstellar" class="poster">
-                <div class="kategoriler">
-                    <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
-                </div>
-                <div class="alt">
-                    <h3><a href="#">Sherlock Holmes</a></h3>
-                    <p class="bilgi">2009 · 128dk · 8.7/10</p>
-                </div>
-            </article>
-
-            <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/inception.png" alt="Interstellar" class="poster">
-                <div class="kategoriler">
-                    <span class="kategori bilim-kurgu"><a href="#">Bilim Kurgu</a></span>
-                </div>
-                <div class="alt">
-                    <h3><a href="#">Inception</a></h3>
-                    <p class="bilgi">2011 · 158dk · 9.0/10</p>
-                </div>
-            </article>
-
-            <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/law.png" alt="Interstellar" class="poster">
-                <div class="kategoriler">
-                    <span class="kategori"><a href="#">Korku</a></span>
-                </div>
-                <div class="alt">
-                    <h3><a href="#">Law Abiding Citizen</a></h3>
-                    <p class="bilgi">2009 · 128dk · 8.7/10</p>
-                </div>
-            </article>
-
-            <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/sh2.png" alt="Interstellar" class="poster">
-                <div class="kategoriler">
-                    <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
-                </div>
-                <div class="alt">
-                    <h3><a href="#">Sherlock Holmes: A Game of Shadows</a></h3>
-                    <p class="bilgi">2011 · 123dk · 7.5/10</p>
-                </div>
-            </article>
-
-            <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/invention.png" alt="Interstellar" class="poster">
-                <div class="kategoriler">
-                    <span class="kategori komedi"><a href="#">Komedi</a></span>
-                </div>
-                <div class="alt">
-                    <h3><a href="#">The Invention of Lying</a></h3>
-                    <p class="bilgi">2009 · 128dk · 8.7/10</p>
-                </div>
-            </article>
-
-            <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/fight-club.png" alt="Interstellar" class="poster">
-                <div class="kategoriler">
-                    <span class="kategori dram"><a href="#">Dram</a></span>
-                </div>
-                <div class="alt">
-                    <h3><a href="#">Fight Club</a></h3>
-                    <p class="bilgi">1999 · 128dk · 8.7/10</p>
-                </div>
-            </article>
-
-            <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/gravity.png" alt="Interstellar" class="poster">
-                <div class="kategoriler">
-                    <span class="kategori bilim-kurgu"><a href="#">Bilim Kurgu</a></span>
-                </div>
-                <div class="alt">
-                    <h3><a href="#">Gravity</a></h3>
-                    <p class="bilgi">2014 · 128dk · 8.7/10</p>
-                </div>
-            </article>
-
-            <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/thor.png" alt="Interstellar" class="poster">
-                <div class="kategoriler">
-                    <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
-                    <span class="kategori bilim-kurgu"><a href="#">Bilim Kurgu</a></span>
-                </div>
-                <div class="alt">
-                    <h3><a href="#">Thor: The Dark World</a></h3>
-                    <p class="bilgi">2014 · 128dk · 8.7/10</p>
-                </div>
-            </article>
+                <?php endwhile; wp_reset_postdata();
+            else:
+                echo '<p>Üzgünüz, sistemde kayıtlı film bulunamadı :(</p>';
+            endif; ?>  
 
         </div>
 
-        <nav class="sayfalama">
+        <!-- <nav class="sayfalama">
             <ul>
                 <li class="geri"><a href="#">&laquo; Geri</a></li>
                 <li><a href="#">1</a></li>
@@ -134,7 +42,7 @@
                 <li><a href="#">9</a></li>
                 <li class="ileri"><a href="#">İleri &raquo;</a></li>
             </ul>
-        </nav>
+        </nav> -->
 
     </section><!--#yeni-filmler-->
     
