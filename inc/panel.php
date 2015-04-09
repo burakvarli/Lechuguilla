@@ -10,7 +10,7 @@ class Lechuguilla_Ayar {
     }
 
     public function add_plugin_page() {
-        add_menu_page(
+        $hook = add_menu_page(
             'Lechuguilla Ayar Sayfası',
             'Lechuguilla',
             'manage_options',
@@ -19,6 +19,19 @@ class Lechuguilla_Ayar {
             get_template_directory_uri() . '/images/ayar-ikon.png',
             81
         );
+
+        add_action('load-'.$hook, function() {
+            wp_enqueue_script(
+                'lechuguilla-panel-js',
+                get_template_directory_uri() . '/scripts/panel.js',
+                array('jquery', 'jquery-ui-sortable')
+            );
+
+            wp_enqueue_style(
+                'lechuguilla-panel-css',
+                get_template_directory_uri() . '/styles/panel.css'
+            );
+        });
     }
 
     public function lechuguilla_ayar_sayfasi() {
@@ -27,25 +40,54 @@ class Lechuguilla_Ayar {
         var_dump($this->options);
         
         ?>
-        <div class="wrap">
+        <div id="lechuguilla_ayar" class="wrap">
             <h2>Lechuguilla Ayar Sayfası</h2>           
             <form method="post" action="options.php">
             
-            <div id="poststuff">
-                <div id="post-body" class="metabox-holder columns-1">
+            <h3>Anasayfa</h3>
 
-                    <div class="postbox-container">
-                        <div class="postbox">
-                            <h3 class="hndle ui-sortable-handle"><span>Publish</span></h3>
-                        </div>
-
-                        <div class="postbox">
-                            <h3 class="hndle ui-sortable-handle"><span>Publish</span></h3>
-                        </div>
+            <div id="anasayfa">
+                <div class="liste">
+                    <div class="liste-ust">
+                        Yeni Filmler
+                        <div class="liste-toggle"></div>
                     </div>
-                    
+                    <div class="liste-icerik">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga consectetur nobis repellat nostrum, voluptate, esse rerum omnis, doloremque ratione, doloribus error. Corporis sequi excepturi sed repellat eum dolorem eveniet, hic.
+                    </div>
+                </div>
+
+                <div class="liste">
+                    <div class="liste-ust">
+                        Yeni Filmler
+                        <div class="liste-toggle"></div>
+                    </div>
+                    <div class="liste-icerik">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga consectetur nobis repellat nostrum, voluptate, esse rerum omnis, doloremque ratione, doloribus error. Corporis sequi excepturi sed repellat eum dolorem eveniet, hic.
+                    </div>
+                </div>
+
+                <div class="liste">
+                    <div class="liste-ust">
+                        Yeni Filmler
+                        <div class="liste-toggle"></div>
+                    </div>
+                    <div class="liste-icerik">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga consectetur nobis repellat nostrum, voluptate, esse rerum omnis, doloremque ratione, doloribus error. Corporis sequi excepturi sed repellat eum dolorem eveniet, hic.
+                    </div>
+                </div>
+
+                <div class="liste">
+                    <div class="liste-ust">
+                        Yeni Filmler
+                        <div class="liste-toggle"></div>
+                    </div>
+                    <div class="liste-icerik">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga consectetur nobis repellat nostrum, voluptate, esse rerum omnis, doloremque ratione, doloribus error. Corporis sequi excepturi sed repellat eum dolorem eveniet, hic.
+                    </div>
                 </div>
             </div>
+
 
             <?php
                 // This prints out all hidden setting fields
@@ -86,7 +128,7 @@ class Lechuguilla_Ayar {
             array( $this, 'title_callback' ), 
             'my-setting-admin', 
             'setting_section_id'
-        );      
+        );
     }
 
     /**
