@@ -7,23 +7,15 @@
         </header>
 
         <div class="filmler">
-            
+      
             <?php
             $yeni_filmler_query = new WP_Query('posts_per_page=10');
 
             if($yeni_filmler_query->have_posts()):
-                while($yeni_filmler_query->have_posts()): $yeni_filmler_query->the_post(); $postmeta = get_post_custom(get_the_ID());?>
-
-                    <article class="film">
-                        <?php gorsel($postmeta, get_the_ID(), get_the_title(), get_the_permalink()); ?>
-                        <?php kategoriler(get_the_ID()); ?>
-                        <div class="alt">
-                            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                            <p class="bilgi"><?php bilgi($postmeta); ?></p>
-                        </div>
-                    </article>
-
-                <?php endwhile; wp_reset_postdata();
+                while($yeni_filmler_query->have_posts()):
+                    $yeni_filmler_query->the_post();                     
+                    get_template_part('film', 'normal');                    
+                endwhile; wp_reset_postdata();
             else:
                 echo '<p>Üzgünüz, sistemde kayıtlı film bulunamadı :(</p>';
             endif; ?>  
@@ -47,85 +39,36 @@
     </section><!--#yeni-filmler-->
     
     <hr/>
+    
+    <?php
+    $populer_filmler_query = new WP_Query(array(
+        'posts_per_page' => 6,
+        'orderby'        => 'meta_value_num',
+        'meta_key'       => 'izlenme',
+        'order'          => 'DESC'
+    ));
+
+
+    if($populer_filmler_query->have_posts()): ?>
 
     <section id="populer-filmler">
         <header>
-            <h2>Popüler Filmler</h2> <span class="tumu"><a href="#">Tümü <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="5px" height="9px" fill="#C6C6C6" viewBox="0 0 5 9" version="1.1"><g stroke="none" stroke-width="1" fill-rule="evenodd" sketch:type="MSPage"><g sketch:type="MSArtboardGroup" transform="translate(-233.000000, -128.000000)"><g sketch:type="MSLayerGroup" transform="translate(28.000000, 116.000000)"><g sketch:type="MSShapeGroup"><g><path d="M205 12.5 L205.5 12 L210 16.5 L205.5 21 L205 20.5 L208.9 16.5 L205 12.5 Z"/></g></g></g></g></g></svg></a></span>
+            <h2>Popüler Filmler</h2> <?php tumune_git('populer-filmler'); ?>
         </header>
 
         <div class="filmler buyuk">
 
-            <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/sherlock.png" alt="Interstellar" class="poster">
-                <div class="kategoriler">
-                    <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
-                </div>
-                <div class="alt">
-                    <h3><a href="#">Sherlock Holmes</a></h3>
-                    <p class="bilgi">2009 · 128dk · 8.7/10</p>
-                </div>
-            </article>
-
-            <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/salt.png" alt="Interstellar" class="poster">
-                <div class="kategoriler">
-                    <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
-                </div>
-                <div class="alt">
-                    <h3><a href="#">Salt</a></h3>
-                    <p class="bilgi">2010 · 128dk · 8.7/10</p>
-                </div>
-            </article>
-
-            <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/entourage.png" alt="Interstellar" class="poster">
-                <div class="kategoriler">
-                    <span class="kategori komedi"><a href="#">Komedi</a></span>
-                </div>
-                <div class="alt">
-                    <h3><a href="#">Entourage: The Movie</a></h3>
-                    <p class="bilgi">2015 · 128dk · 8.7/10</p>
-                </div>
-            </article>
-
-            <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/avangers.png" alt="Interstellar" class="poster">
-                <div class="kategoriler">
-                    <span class="kategori aksiyon"><a href="#">Aksiyon</a></span>
-                </div>
-                <div class="alt">
-                    <h3><a href="#">The Avangers</a></h3>
-                    <p class="bilgi">2014 · 128dk · 8.7/10</p>
-                </div>
-            </article>
-
-            <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/fury.png" alt="Interstellar" class="poster">
-                <div class="kategoriler">
-                    <span class="kategori dram"><a href="#">Dram</a></span>
-                </div>
-                <div class="alt">
-                    <h3><a href="#">Fury</a></h3>
-                    <p class="bilgi">2014 · 128dk · 8.7/10</p>
-                </div>
-            </article>
-
-            <article class="film">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gecici/farm.png" alt="Interstellar" class="poster">
-                <div class="kategoriler">
-                    <span class="kategori komedi"><a href="#">Komedi</a></span>
-                    <span class="kategori dram"><a href="#">Dram</a></span>
-                </div>
-                <div class="alt">
-                    <h3><a href="#">The Farm</a></h3>
-                    <p class="bilgi">2013 · 128dk · 8.7/10</p>
-                </div>
-            </article>
+        <?php while($populer_filmler_query->have_posts()):
+            $populer_filmler_query->the_post();                     
+            get_template_part('film', 'buyuk');                    
+        endwhile; wp_reset_postdata(); ?>
 
         </div>
     </section><!--#populer-filmler-->
     
     <hr/>
+
+    <?php endif; ?>        
 
     <div class="orta-banner">
         768x90 Reklam Alanı

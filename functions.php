@@ -1,4 +1,4 @@
-<?php
+<?php ob_start();
 
 //versiyon 4.1'den küçükse hata ver
 if (version_compare($GLOBALS['wp_version'], '4.1-alpha', '<')) {
@@ -28,10 +28,8 @@ if(is_admin()) {
 
 //
 add_action('init', function(){
-	
 	remove_post_type_support('post', 'editor');
 	add_post_type_support('post', 'excerpt');
-
 });
 
 //javascript ve css dosyalarını ekle
@@ -91,4 +89,17 @@ function kategoriler($postID){
 	}, get_the_category($postID));
 
 	echo '</div>';
+}
+
+//film izlenme sayısı
+function izlenme($postID) {
+
+	$izlenme = get_post_meta($postID, 'izlenme', true) ? (int) get_post_meta($postID, 'izlenme', true) : 0;
+
+	if(!isset($_COOKIE['film_izlendi_'. $postID]) && $_COOKIE['film_izlendi_'. $postID] !== true) {	
+		update_post_meta($postID, 'izlenme', ++$izlenme);
+		setcookie('film_izlendi_'. $postID, true, time() + 60 * 60 * 6);
+	}
+
+	return $izlenme;
 }

@@ -2,7 +2,6 @@ jQuery(document).ready(function() {
 
     jQuery("#anasayfa").sortable({
         placeholder: "tasima-yardimci",
-        //item: ".liste",
         handle: ".liste-ust",
         cancel: ".liste-toggle",
         cursor: "move",
